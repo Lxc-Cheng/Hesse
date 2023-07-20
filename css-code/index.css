@@ -1,0 +1,38 @@
+body{
+    background-image: url(img/website.png);
+    background-repeat:no-repeat;
+    background-attachment: scroll;
+    background-repeat:repeat-x;
+}
+ul{
+    list-style-type: none;
+    margin: 10%;
+    padding: 0% 10%;
+    overflow: hidden;
+    background-color: antiquewhite;
+    border-radius: 25px 25px 0 0;
+    
+}
+li{
+    float: left;
+}
+li a{
+    display:block;
+    text-align: left;
+    padding: 20px 15px;
+    text-decoration: none;
+    height: 10%;
+    width: 72px;
+    color:black;
+}
+li a:hover{
+    color: #ffffff;
+    background-color: #111;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}

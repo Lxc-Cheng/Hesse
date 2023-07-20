@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="css-code/index.css">
+    <style type="text/css">
+        body{
+            background-image: url(img/purple.png);
+            background-repeat:no-repeat;
+        }   
+
+        .dropdown{
+            position: relative;
+            display: contents;
+        }
+        .dropdown-content{
+            display: none;
+            position: relative;
+            text-align: center;
+            /* padding: 20px 15px; */
+            
+        }
+        .dropdown:hover .dropdown-content {
+            display:block;
+
+        }
+        .dropdown-content a:hover{
+            color: black;
+            background-color: antiquewhite;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky">
+        <ul>
+            <li><a>Home</a></li>
+
+
+            <li>
+                <div class="dropdown"><a>Website</a>
+                <div class="dropdown-content">
+                    <a href="https://www.bilibili.com/">Bilibili</a>
+                    <a href="https://github.com/">Github</a>
+                    <a href="https://www.runoob.com/">Runoob</a>
+                    <a href="https://www.w3school.com.cn/index.html">w3school</a>
+                    <a href="https://www.vogue.com/photovogue">Vogue</a>
+                    <a href="https://weibo.com/?sudaref=cn.bing.com">Weibo</a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+                </div>
+            </li>
+            <li><a href="picture.html">Picture</a></li>
+            <li><a>Contact</a></li>
+            <li><a>about</a></li>
+            
+        </ul>
+    </div>
+    <div id="picture" style="height: 2240px;">
+        <img src="img/那年夏天，宁静的海.jpg">
+    </div>
+</body>
+</html>
