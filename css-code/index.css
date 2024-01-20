@@ -37,3 +37,9 @@ img {
     margin: 0;
     padding: 0;
 }
+
+#fixed{
+    position: fixed;
+    right:35%;
+    bottom:0%
+}
