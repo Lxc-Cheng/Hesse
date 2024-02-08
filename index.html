@@ -94,7 +94,7 @@ if (startPlayPromise !== undefined) {
             <li><a>Contact</a></li>
             <li><a>about</a></li>
             <li>
-                <audio  controls autoplay >
+                <audio  controls  >
                 <source src="art/❀ - nevva.mp3" type="audio/mpeg">
                 <embed height="50" width="100" src="horse.mp3">
                 </audio>
@@ -134,11 +134,35 @@ if (startPlayPromise !== undefined) {
         alert("hello")
     </script> -->
     <script>
-        window.addEventListener("click", function(){
-            let videoElem = document.getElementById("audio")
-            videoElem.play()
+        var audio = new Audio('art/❀ - nevva.mp3'); // 替换为你的音乐文件路径  
+        var playedPromise = audio.play();
+
+        // 检查音乐是否成功播放  
+        if (playedPromise !== undefined) {
+            playedPromise.then(_ => {
+                // 音乐成功播放，这里不需要做任何事情  
+            }).catch(error => {
+                // 音乐播放失败，显示提示消息  
+                alert('音乐无法自动播放，请点击页面上的播放按钮。');
+
+                // 可选：在页面上添加一个播放按钮  
+                var playButton = document.createElement('button');
+                playButton.textContent = '播放音乐';
+                playButton.onclick = function () {
+                    audio.play().catch(function (error) {
+                        console.error('播放音乐时发生错误:', error);
+                    });
+                };
+                document.body.appendChild(playButton);
+            });
+        }
+        // let videoElem = document.querySelector("audio");
+        // IS_OK = window.confirm("sdf");
+        // window.addEventListener("click", function(){
+            
+        //     videoElem.play()
         
-        });
+        // });
         
         // 
         // let startPlayPromise = videoElem.play();
@@ -160,7 +184,7 @@ if (startPlayPromise !== undefined) {
         // } 
         // window.alert("ok");
     
-        window.confirm("ok");
+        
         
         
     </script>
