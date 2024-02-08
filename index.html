@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" /> -->
     <title>Cheng</title>
 
     <link rel="stylesheet" type="text/css" href="css-code/index.css">
@@ -53,28 +56,9 @@
     
     
     <div class="sticky">
-        <!-- <script>
-            let startPlayPromise = videoElem.play();
-
-if (startPlayPromise !== undefined) {
-  startPlayPromise
-    .catch((error) => {
-      if (error.name === "NotAllowedError") {
-        showPlayButton(videoElem);
-      } else {
-        // 处理加载或播放错误
-      }
-    })
-    .then(() => {
-      // 仅在播放开始后才开始执行你需要执行的操作。
-    });
-}
-
-        </script> -->
+    
         <ul>
             <li><a href="index.html">Home</a></li>
-
-
             <li>
                 <div class="dropdown"><a>Website</a>
                 <div class="dropdown-content">
@@ -94,45 +78,25 @@ if (startPlayPromise !== undefined) {
             <li><a>Contact</a></li>
             <li><a>about</a></li>
             <li>
-                <audio  controls  >
+                <a onclick="">Music</a>
+                <!-- <audio  controls  >
                 <source src="art/❀ - nevva.mp3" type="audio/mpeg">
                 <embed height="50" width="100" src="horse.mp3">
-                </audio>
+                </audio> -->
             </li>
+            <!-- <li>
+                <a onclick="audio.pause();">Start</a>
+            </li> -->
             
-        </ul>
-
-        <!-- <iframe id="fixed" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1817144743&auto=1&height=66"></iframe> -->
-        
-        
-        <!-- <audio controls autoplay id="dd">
-            <source src="art/❀ - nevva.mp3" type="audio/mpeg">
-            <embed height="50" width="100" src="horse.mp3"> -->
-        <!-- </audio>
-        <button onclick="dt()">pause</button>
-        <button onclick="st()">start</button>
-        <button onclick="rs()">reset</button> -->
-        <!-- <script>
-            function dt(){
-                var dd =document.getElementById("dd")
-                dd.pause()
-            }
-            function st(){
-                var dd =document.getElementById("dd")
-                dd.play()
-            }
-        </script>
-        <a href=>Play the sound</a> -->
-        
+        </ul>  
     </div>
+
+
     <div style="height: 2240px;">
         <p></p>
         <p></p>
     </div>
-    <!-- <input type="button" value="hello" onclick="window.alert('hello js')"/> -->
-    <!-- <script type="text/javascript">
-        alert("hello")
-    </script> -->
+    
     <script>
         var audio = new Audio('art/❀ - nevva.mp3'); // 替换为你的音乐文件路径  
         var playedPromise = audio.play();
@@ -145,16 +109,24 @@ if (startPlayPromise !== undefined) {
                 // 音乐播放失败，显示提示消息  
                 alert('音乐无法自动播放，请点击页面上的播放按钮。');
 
-                // 可选：在页面上添加一个播放按钮  
-                var playButton = document.createElement('button');
-                playButton.textContent = '播放音乐';
-                playButton.onclick = function () {
-                    audio.play().catch(function (error) {
-                        console.error('播放音乐时发生错误:', error);
-                    });
-                };
-                document.body.appendChild(playButton);
+                // // 可选：在页面上添加一个播放按钮  
+                // var playButton = document.createElement('button');
+                // playButton.textContent = '播放音乐';
+                // playButton.onclick = function () {
+                //     audio.play().catch(function (error) {
+                //         console.error('播放音乐时发生错误:', error);
+                //     });
+                // };
+                // document.body.appendChild(playButton);
             });
+        }
+
+        if(audio.onclick() == true){
+            if(audio.play() == 1){
+                audio.pause();
+            }else{
+                audio.play();
+            }
         }
         // let videoElem = document.querySelector("audio");
         // IS_OK = window.confirm("sdf");
