@@ -92,7 +92,8 @@ if (startPlayPromise !== undefined) {
             <li><a href="picture.html">Picture</a></li>
             <li><a>Contact</a></li>
             <li><a>about</a></li>
-            <li><audio  controls autoplay >
+            <li>
+                <audio  controls autoplay >
                 <source src="art/❀ - nevva.mp3" type="audio/mpeg">
                 <embed height="50" width="100" src="horse.mp3">
                 </audio>
@@ -130,5 +131,35 @@ if (startPlayPromise !== undefined) {
     <!-- <script type="text/javascript">
         alert("hello")
     </script> -->
+    <script>
+        window.addEventListener("click", function(){
+            videoElem.play()
+        
+        });
+        window.alert("ok");
+        // let videoElem = document.getElementById("audio");
+        // let startPlayPromise = videoElem.play();
+
+        // if (startPlayPromise !== undefined) {
+        // startPlayPromise
+        //     .catch((error) => {
+        //     if (error.name === "NotAllowedError") {
+        //         //showPlayButton(videoElem);
+        //         window.alert("ok");
+        //     } else {
+        //         window.alert("ok");// 处理加载或播放错误
+        //     }
+        //     })
+        //     .then(() => {
+        //         window.alert("ok");
+        //     // 仅在播放开始后才开始执行你需要执行的操作。
+        //     });
+        // } 
+        // window.alert("ok");
+    
+        
+        
+        
+    </script>
 </body>
 </html>
