@@ -75,18 +75,19 @@
                 </div>
             </li>
             <li><a href="picture.html">Picture</a></li>
-            <li><a>Contact</a></li>
-            <li><a>about</a></li>
+            <li><a href="firework/index.html">firework</a></li>
+            <!-- <li><a>Contact</a></li> -->
+            <!-- <li><a>about</a></li> -->
             <li>
-                <a onclick="">Music</a>
+                <a id="mus" onclick="audio.play()" >Start</a>
                 <!-- <audio  controls  >
                 <source src="art/❀ - nevva.mp3" type="audio/mpeg">
                 <embed height="50" width="100" src="horse.mp3">
                 </audio> -->
             </li>
-            <!-- <li>
-                <a onclick="audio.pause();">Start</a>
-            </li> -->
+            <li>
+                <a onclick="audio.pause();">Pause</a>
+            </li>
             
         </ul>  
     </div>
@@ -99,40 +100,50 @@
     
     <script>
         var audio = new Audio('art/❀ - nevva.mp3'); // 替换为你的音乐文件路径  
-        var playedPromise = audio.play();
+        //var playedPromise = audio.play();
 
         // 检查音乐是否成功播放  
-        if (playedPromise !== undefined) {
-            playedPromise.then(_ => {
-                // 音乐成功播放，这里不需要做任何事情  
-            }).catch(error => {
-                // 音乐播放失败，显示提示消息  
-                alert('音乐无法自动播放，请点击页面上的播放按钮。');
+        // if (playedPromise !== undefined) {
+        //     playedPromise.then(_ => {
+        //         // 音乐成功播放，这里不需要做任何事情  
+        //     }).catch(error => {
+        //         // 音乐播放失败，显示提示消息  
+        //         alert('音乐无法自动播放，请点击页面上的播放按钮。');
 
-                // // 可选：在页面上添加一个播放按钮  
-                // var playButton = document.createElement('button');
-                // playButton.textContent = '播放音乐';
-                // playButton.onclick = function () {
-                //     audio.play().catch(function (error) {
-                //         console.error('播放音乐时发生错误:', error);
-                //     });
-                // };
-                // document.body.appendChild(playButton);
-            });
-        }
+        //         // // 可选：在页面上添加一个播放按钮  
+        //         // var playButton = document.createElement('button');
+        //         // playButton.textContent = '播放音乐';
+        //         // playButton.onclick = function () {
+        //         //     audio.play().catch(function (error) {
+        //         //         console.error('播放音乐时发生错误:', error);
+        //         //     });
+        //         // };
+        //         // document.body.appendChild(playButton);
+        //     });
+        // }
 
-        if(audio.onclick() == true){
-            if(audio.play() == 1){
-                audio.pause();
-            }else{
-                audio.play();
-            }
-        }
-        // let videoElem = document.querySelector("audio");
-        // IS_OK = window.confirm("sdf");
-        // window.addEventListener("click", function(){
-            
-        //     videoElem.play()
+        // if(audio.onclick() == true){
+        //     if(audio.play() == 1){
+        //         audio.pause();
+        //     }else{
+        //         audio.play();
+        //     }
+        // }
+        // let videoElem = document.getElementById("mus");
+        // let IS = false;
+        // videoElem.addEventListener("click", function(){
+        //     // audio.play();
+        //     if(IS == false){
+        //         audio.play();
+        //         IS == true;
+        //     }else{
+        //         audio.play();
+        //     }
+        //     // if(audio.play() !== undefined){
+        //     //     audio.pause();
+        //     // }else if(audio.pause() !== undefined){
+        //     //     audio.play();
+        //     // }
         
         // });
         
